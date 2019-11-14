@@ -1,0 +1,32 @@
+server:
+  port: 80
+spring:
+  application:
+    name: webui
+  redis:
+    host: 192.168.25.129
+    jedis:
+      pool:
+        max-idle: 100
+  session:
+    store-type: redis
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://localhost:1000/eureka/
+  instance:
+    prefer-ip-address: true
+
+oss.project.parent.folder: project
+oss.endpoint: http://oss-cn-shanghai.aliyuncs.com
+oss.accessKeyId: LTAI4Fxgat1JG3GLiNwq6tLY
+oss.accessKeySecret: wqZaVi5VjIZBVoonRTQYMi02tnm0tF
+oss.bucketName: learnjiawa001
+oss.bucket.domain: http://learnjiawa001.oss-cn-shanghai.aliyuncs.com
+
+ali.pay.app.id: "2016101400687436"
